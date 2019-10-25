@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="dog" class="my.ioc.Dog.Dog" lazy-init="true">
+		<property name="id"  value="123"></property>
+		<property name="user" ref="user"></property>
+	</bean>
+	
+	<bean id="user" clamy.ioc.Userioc.User" lazy-init="true" destroy-method="destroy2">
+		<property name="name"  value="pengwei"></property>
+		<property name="password" value="123456"></property>
+		<property name="dog" ref="dog"></property>
+	</bean>
+	
+	<bean id="u1"my.ioc.MyFactoryBeanyFactoryBean" lazy-init="true">
+	</bean>
+</beans>
